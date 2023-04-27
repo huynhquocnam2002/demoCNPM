@@ -20,7 +20,7 @@ public class DanhmucSeachServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         HttpSession session = request.getSession();
         session.removeAttribute("txt");
-        // 4. xu ly du lieu va luu bien vao section chuyen sang lop thongbaoDao xu ly
+        // 4. xu ly du lieu
         try {
             String txt = request.getParameter("input_seach1");
             session.setAttribute("txt" , txt);

@@ -1,12 +1,13 @@
 <%@ page import="java.util.List" %>
 <%@ page import="Form.Control.ThongbaoDao" %>
 <%@ page import="Form.model.Thongbao" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
 
-    <meta charset="UTF-8" />
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link
             rel="stylesheet"
@@ -147,17 +148,14 @@
                 <div class="manage-products-filter-container">
                     <div class="filter-container">
                         <div class="input-filter">
-                            <form action="DanhmucSeachServlet" method="post" class="nav__item_seach">
+                            <form style="border-radius: 0;" action="DanhmucSeachServlet" method="post" class="nav__item_seach">
                                 <!-- 2. nhap du lieu tim kiem-->
-                                <input class="input_seach1" id="input_seach1" type="text" name="input_seach1"
+                                <input style="border-radius: 0; width: 90%;" class="input_seach1" id="input_seach1" type="text" name="input_seach1"
                                        placeholder="seach...">
                                 <!-- 3. bam nut xac nhan tim kiem-->
                                 <div class="nav__icons">
-                                    <button class="icon__item" id="icon__item_seach1" type="submit" name="btnseach"
-                                            value="Go">
-                                        <svg class="icon__search">
-                                            <use xlink:href="image/images/sprite.svg#icon-search"></use>
-                                        </svg>
+                                    <button style="border-radius: 0" class="icon__item" id="icon__item_seach1" type="submit" name="btnseach"
+                                            value="Go"> Tìm Kiếm
                                     </button>
                                 </div>
                             </form>
@@ -206,7 +204,7 @@
                                 </tr>
                             </table>
                         </div>
-                        <!-- 8. hien thuc ket qua seach ra trang quan ly cho nguoi dung thay-->
+                        <!-- 7. hien thuc ket qua seach ra trang quan ly cho nguoi dung thay-->
                         <% List<Thongbao> getall = ThongbaoDao.getAllThongbaos();%>
 
                         <% for (int i = 0; i < getall.size(); i++) {%>
@@ -280,15 +278,10 @@
                                                 <option class="delete-option" value="-1">
                                                     Đã xóa
                                                 </option>
-                                                <option class="upcoming-option" value="0">
-                                                    Sắp mở bán
-                                                </option>
                                                 <option class="selling-option" value="1" selected>
-                                                    Đang bán
+                                                    Đang hoạt động
                                                 </option>
-                                                <option class="stop-selling-option" value="2">
-                                                    Dừng kinh doanh
-                                                </option>
+
                                             </select>
                                         </div>
                                     </td>

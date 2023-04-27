@@ -10,9 +10,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ThongbaoDao {
-    // 5. xu ly du lieu seach tu tham so truyen vao va tra ve danh sach ket qua
+    //  xu ly du lieu seach tu tham so truyen vao va tra ve danh sach ket qua
     public static List<Thongbao> getThongbao(String text) throws SQLException, ClassNotFoundException {
-        // 6. conect database
+        // 5. conect database
         DataDB db = new DataDB();
         List<Thongbao> res = new ArrayList<Thongbao>();
         PreparedStatement sta = db.getStatement("SELECT * \n" +
@@ -23,7 +23,7 @@ public class ThongbaoDao {
             Thongbao p = new Thongbao(rs.getString("id"),rs.getString("title"),rs.getString("content"),rs.getString("date_add"),rs.getString("image"),rs.getString("status"));
             res.add(p);
         }
-        // 7. tra ve du lieu xu ly
+        // 6. tra ve du lieu xu ly
         return res;
     }
     public static List<Thongbao> getAllThongbaos() throws SQLException, ClassNotFoundException {
